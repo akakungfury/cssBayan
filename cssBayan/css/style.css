@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 0.625em;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-family: "Russo One", Cera, Arial, sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  scroll-behavior: smooth !important;
+  text-rendering: optimizeSpeed;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.3vw;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.376);
+  border-radius: 2vw;
+}
+
+body {
+  background-color: #f6f6ec;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.body-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 2%;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.header-wrapper {
+  padding: 2% 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.bayan-item {
+  display: block;
+  user-select: none !important;
+  cursor: pointer;
+  padding: 1% 0;
+  border-top: 0.1vw solid rgba(128, 128, 128, 0.376);
+}
+
+.bayan-item input {
+  display: block;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+}
+
+.bayan-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bayan-item__title {
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  color: rgb(0, 0, 255);
+  margin-right: 5%;
+  transition: color 0.3s 0.15s ease-in-out;
+}
+
+.bayan-item_cross-icon {
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 2.4rem;
+  background-image: url("../assets/images/plus-solid.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease-in-out, opacity 0.3s 0.15s ease-in-out;
+  opacity: 0;
+}
+
+.bayan-item__content {
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.bayan-item__content > img {
+  width: 0;
+  margin: 0 auto;
+  padding-top: 1%;
+  transition: width 0.3s ease-in-out, padding 0.2s ease-in-out;
+}
