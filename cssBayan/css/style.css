@@ -166,3 +166,72 @@ h1 {
     transform: rotate(45deg);
   }
 }
+
+@media only screen and (max-width: 1920px) {
+  .bayan-item {
+    border-top: 0.17vw solid rgba(128, 128, 128, 0.376);
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .header-wrapper {
+    padding-top: 3%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .bayan-item {
+    padding: 2.5% 0;
+    border-top: 0.3vw solid rgba(128, 128, 128, 0.376);
+  }
+
+  .bayan-item__title {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: #000000;
+  }
+
+  .bayan-item_cross-icon {
+    width: 2rem;
+    height: 2.2rem;
+    opacity: 1;
+  }
+
+  .bayan-item__content > img {
+    padding-top: 2%;
+  }
+
+  .bayan-item input:checked ~ .bayan-item__content > img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .bayan-item {
+    padding: 3% 0;
+  }
+
+  .bayan-item__title {
+    font-size: 1.2rem;
+    margin-right: 2%;
+  }
+
+  .bayan-item_cross-icon {
+    width: 1.6rem;
+    height: 1.8rem;
+  }
+
+  .bayan-item__content > img {
+    padding-top: 3%;
+  }
+
+  .bayan-item input:checked ~ .bayan-item__content > img {
+    width: 80%;
+  }
+}
