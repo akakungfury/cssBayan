@@ -103,6 +103,7 @@ h1 {
 .bayan-item:active input ~ .bayan-item__header .bayan-item__title {
   color: #9f00ff;
   opacity: 0.8;
+  transition: color 0.15s;
 }
 
 .bayan-item input:checked ~ .bayan-item__header .bayan-item__title {
@@ -124,6 +125,7 @@ h1 {
 .bayan-item:active input ~ .bayan-item__header .bayan-item_cross-icon {
   filter: invert(12%) sepia(97%) saturate(5876%) hue-rotate(278deg) brightness(97%) contrast(123%);
   opacity: 0.8;
+  transition: opacity 0.15s;
 }
 
 .bayan-item input:checked ~ .bayan-item__header .bayan-item_cross-icon {
@@ -133,6 +135,7 @@ h1 {
 
 .bayan-item:active input:checked ~ .bayan-item__header .bayan-item_cross-icon {
   opacity: 1;
+  transition: opacity 0.15s;
 }
 
 .bayan-item__content {
@@ -156,11 +159,12 @@ h1 {
 
 .bayan-item:active input ~ .bayan-item__content > img {
   opacity: 0.8;
+  transition: opacity 0.15s;
 }
 
 .bayan-item input:checked ~ .bayan-item__content > img {
   width: 40%;
-  transition: width 0.4s 0.1s ease-in-out, padding 0.3s ease-in-out;
+  transition: width 0.4s 0.1s ease-in-out, padding 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 1;
 }
 
