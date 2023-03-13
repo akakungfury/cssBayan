@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -72,6 +70,7 @@ h1 {
   cursor: pointer;
   padding: 1% 0;
   border-top: 0.1vw solid rgba(128, 128, 128, 0.376);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .bayan-item input {
@@ -101,8 +100,14 @@ h1 {
   transition: color 0.3s 0.15s ease-in-out;
 }
 
+.bayan-item:active input ~ .bayan-item__header .bayan-item__title {
+  color: #9f00ff;
+  opacity: 0.8;
+}
+
 .bayan-item input:checked ~ .bayan-item__header .bayan-item__title {
   color: #000000;
+  opacity: 1;
 }
 
 .bayan-item_cross-icon {
@@ -112,12 +117,22 @@ h1 {
   background-image: url("../assets/images/plus-solid.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  transition: transform 0.4s ease-in-out, opacity 0.3s 0.15s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.3s 0.15s ease-in-out, filter 0.3s 0.15s ease-in-out;
   opacity: 0;
+}
+
+.bayan-item:active input ~ .bayan-item__header .bayan-item_cross-icon {
+  filter: invert(12%) sepia(97%) saturate(5876%) hue-rotate(278deg) brightness(97%) contrast(123%);
+  opacity: 0.8;
 }
 
 .bayan-item input:checked ~ .bayan-item__header .bayan-item_cross-icon {
   transform: rotate(45deg);
+  filter: none;
+}
+
+.bayan-item:active input:checked ~ .bayan-item__header .bayan-item_cross-icon {
+  opacity: 1;
 }
 
 .bayan-item__content {
@@ -136,12 +151,17 @@ h1 {
   width: 0;
   margin: 0 auto;
   padding-top: 1%;
-  transition: width 0.3s ease-in-out, padding 0.2s ease-in-out;
+  transition: width 0.3s ease-in-out, padding 0.2s ease-in-out, opacity 0.3s 0.15s ease-in-out;
+}
+
+.bayan-item:active input ~ .bayan-item__content > img {
+  opacity: 0.8;
 }
 
 .bayan-item input:checked ~ .bayan-item__content > img {
   width: 40%;
   transition: width 0.4s 0.1s ease-in-out, padding 0.3s ease-in-out;
+  opacity: 1;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -151,7 +171,7 @@ h1 {
   }
   .bayan-item:hover > .bayan-item__content > img {
     width: 40%;
-    transition: width 0.4s 0.1s ease-in-out, padding 0.3s ease-in-out;
+    transition: width 0.4s 0.1s ease-in-out, padding 0.3s ease-in-out, opacity 0.3s 0.15s ease-in-out;
   }
 
   .bayan__items:hover .bayan-item_cross-icon {
@@ -205,6 +225,21 @@ h1 {
 
   .bayan-item input:checked ~ .bayan-item__content > img {
     width: 50%;
+  }
+
+  .bayan-item:active input ~ .bayan-item__header .bayan-item__title {
+    color: #000000;
+    opacity: 1;
+  }
+
+  .bayan-item:active input ~ .bayan-item__header .bayan-item_cross-icon {
+    filter: none;
+    opacity: 1;
+  }
+
+  .bayan-item:active input:checked ~ .bayan-item__header .bayan-item_cross-icon {
+    filter: none;
+    opacity: 1;
   }
 }
 
